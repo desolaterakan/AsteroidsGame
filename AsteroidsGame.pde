@@ -19,14 +19,11 @@ public void draw() {
   Yao.show();
   if (keyPressed) {
     if (key == 'h') {
-      Yao.hyper();
-    }
-    
-    if (key == 'v') {
-      Yao.accelerate(1);
+        Yao.hyper();
     }
     
     if (key == 'w') {
+      Yao.accelerate(0.25);
       Yao.move();
     }
     
@@ -35,7 +32,8 @@ public void draw() {
     }
     
     if (key == 's') {
-      Yao.accelerate(-1);
+      Yao.accelerate(-0.5);
+      Yao.move();
     }
     
     if (key == 'd') {
