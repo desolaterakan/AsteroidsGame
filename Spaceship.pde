@@ -6,8 +6,8 @@ class Spaceship extends Floater {
     myColor = 255;
     myCenterX = 200;
     myCenterY = 200;
-    myXspeed = 5 * Math.cos(myPointDirection);
-    myYspeed = 5 * Math.sin(myPointDirection);
+    myXspeed = 5;
+    myYspeed = 5;
     myPointDirection = 0;
   }
   
