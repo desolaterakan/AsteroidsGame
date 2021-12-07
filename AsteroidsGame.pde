@@ -1,10 +1,13 @@
 Star [] Allen;
+ArrayList <Asteroid> Yue = new ArrayList <Asteroid>();
 Spaceship Yao;
 
 public void setup() {
-  noStroke();
   size(400, 400);
   Allen = new Star[100];
+  for (int e = 0; e < 10; e++) {
+    Yue.add(new Asteroid());
+  }
   Yao = new Spaceship();
   for (int e = 0; e < Allen.length; e++) {
     Allen[e] = new Star();
@@ -16,6 +19,18 @@ public void draw() {
   for (int e = 0; e < Allen.length; e++) {
     Allen[e].show();
   }
+  
+  for (int e = 0; e < Yue.size(); e++) {
+    stroke(255);
+    Yue.get(e).show();
+    Yue.get(e).move();
+    float d = dist(Yao.getX(), Yao.getY(), Yue.get(e).getX(), Yue.get(e).getY());
+    if (d < 25) {
+      Yue.remove(e);
+    }
+  }
+  
+  noStroke();
   Yao.show();
   if (keyPressed) {
     if (key == 'h') {
@@ -23,7 +38,7 @@ public void draw() {
     }
     
     if (key == 'w') {
-      Yao.accelerate(0.25);
+      Yao.accelerate(0.05);
       Yao.move();
     }
     
@@ -32,7 +47,7 @@ public void draw() {
     }
     
     if (key == 's') {
-      Yao.accelerate(-0.5);
+      Yao.accelerate(-0.05);
       Yao.move();
     }
     
