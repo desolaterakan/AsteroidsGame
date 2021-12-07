@@ -15,13 +15,13 @@ public void setup() {
 }
 
 public void draw() {
-  background(0);
+  background(255);
   for (int e = 0; e < Allen.length; e++) {
     Allen[e].show();
   }
   
   for (int e = 0; e < Yue.size(); e++) {
-    stroke(255);
+    stroke(0);
     Yue.get(e).show();
     Yue.get(e).move();
     float d = dist(Yao.getX(), Yao.getY(), Yue.get(e).getX(), Yue.get(e).getY());
