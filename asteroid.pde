@@ -6,9 +6,6 @@ class Asteroid extends Floater {
     myColor = 0;
     myCenterX = 0;
     myCenterY = 0;
-    // myXspeed = 3;
-    // myYspeed = 3;
-    // myPointDirection = 0;
   }
 
   float getX() {
